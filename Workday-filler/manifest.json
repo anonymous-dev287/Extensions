@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Workday AutoFill",
+  "version": "1.0",
+  "description": "Auto-fills Workday application forms with stored profile data",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.myworkdayjobs.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
